@@ -1,0 +1,59 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Layout
+//  ---------------------------------
+
+//  Common
+
+.message {
+    @include property__prefixer(transition, all .5s);
+    background-color: rgba($color__black, .5);
+    bottom: 0;
+    left: 0;
+    padding: $indent__s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.message__wrapper {
+    @include property__prefixer(transform, translate(-50%, -50%));
+    background-color: rgba($color__white, .7);
+    box-sizing: border-box;
+    border: 1px solid $color__yellow_husk;
+    left: 50%;
+    padding: $indent__s;
+    position: absolute;
+    width: calc(100% - #{$indent__xl});
+    top: 50%;
+}
+
+.message__controls {
+    @include display__flex();
+    margin-top: $indent__xs;
+
+    .button {
+        padding: $indent__xs;
+        width: calc(50% - #{$indent__xs});
+
+        &:first-child {
+            margin-right: $indent__base;
+        }
+    }
+}
+
+.message__title {
+    margin-top: 0;
+}
+
+.message--show {
+    opacity: 1;
+    z-index: $z-index__500;
+    visibility: visible;
+}

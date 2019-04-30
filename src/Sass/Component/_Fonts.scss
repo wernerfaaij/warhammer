@@ -1,0 +1,17 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Sources
+//  ---------------------------------
+
+// Common
+
+@include font-face (
+    $font-family__pompei,
+    '#{$base__url}Fonts/Pompei/PompeiNewW00-Light',
+    $font-weight__regular,
+    normal
+);

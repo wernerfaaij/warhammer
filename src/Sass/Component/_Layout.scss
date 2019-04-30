@@ -1,0 +1,18 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Layout
+//  ---------------------------------
+
+//  Common
+
+body {
+    background-image: url("#{$base__url}Images/bg.png");
+}
+
+section {
+    padding: $indent__s;
+}

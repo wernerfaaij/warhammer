@@ -1,0 +1,24 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------------------
+
+//
+//  Resets:
+//  ---------------------------------------------
+
+// Common
+
+html {
+    font-size: $root__font-size;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $font-size__base;
+    font-family: $font-family__base;
+    font-weight: $font-weight__regular;
+    line-height: $line-height__m;
+    margin: 0;
+}

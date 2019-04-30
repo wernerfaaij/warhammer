@@ -1,0 +1,45 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  -------------------------------
+
+//
+//  Utilities:
+//  -------------------------------
+
+@mixin css (
+    $_prop,
+    $_value: null,
+    $_prefix: null
+) {
+    @if ($_value) {
+        @if ($_prefix) {
+            @include property__prefixer ($_prop, $_value);
+        } @else {
+            #{$_prop}: $_value;
+        }
+    }
+}
+
+// Prefixers
+@mixin value__prefixer (
+    $_prop: null,
+    $_value: null
+) {
+    @if ($_prop and $_value) {
+        @each $_prefix in $prefixes {
+            #{$_prop}: #{$_prefix}#{$_value};
+        }
+    }
+}
+
+@mixin property__prefixer (
+    $_prop: null,
+    $_value: null
+) {
+    @if ($_prop and $_value) {
+        @each $_prefix in $prefixes {
+            #{$_prefix}#{$_prop}: $_value;
+        }
+    }
+}

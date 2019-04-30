@@ -1,0 +1,127 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------------------
+
+//
+//  Typography:
+//  ---------------------------------------------
+
+//  Font families
+$font-family__fallback: Helvetica, Arial, sans-serif;
+$font-family__pompei: 'pompei new light';
+$font-family__name: $font-family__pompei;
+
+$font-family__base: $font-family__name, $font-family__fallback;
+
+//  Root font-size
+$root__font-size: 62.5%;
+
+//  Font Size
+$font-size__base: 1.4rem; // 14px
+$font-size__xxl: decimal-ceil($font-size__base * 2.57, 1); // 36
+$font-size__xl: decimal-ceil($font-size__base * 1.7, 1); //  24
+$font-size__l: decimal-ceil($font-size__base * 1.25, 1); //  18
+$font-size__m: decimal-ceil($font-size__base * 1.14, 1); //  16
+$font-size__xs: decimal-ceil($font-size__base * .8, 1); //  12
+$font-size__xs: decimal-ceil($font-size__base * .75, 1); //  11
+$font-size__xxs: decimal-ceil($font-size__base * .7, 1); //  10
+
+//  Font Weight
+$font-weight__light: 300;
+$font-weight__regular: 400;
+$font-weight__heavier: 500;
+$font-weight__semibold: 600;
+$font-weight__bold: 700;
+
+//  Styles
+$font-style__base: normal;
+$font-style__italic: italic;
+
+//  Line Height
+$line-height__base: 2rem; // 20px
+$line-height__xxl: decimal-ceil($line-height__base * 2.25, 1); //  45px
+$line-height__xl: decimal-ceil($line-height__base * 2, 1); //  40px
+$line-height__l: decimal-ceil($line-height__base * 1.7, 1); //  34px
+$line-height__m: decimal-ceil($line-height__base * 1.25, 1); //  21px
+$line-height__s: decimal-ceil($line-height__base * .8, 1); //  16px
+$line-height__xs: decimal-ceil($line-height__base * .75, 1); //  15px
+$line-height__xxs: decimal-ceil($line-height__base * .7, 1); //  14px
+
+//  Z-Index
+$z-index__100: 100;
+$z-index__200: 200;
+$z-index__300: 300;
+$z-index__400: 400;
+$z-index__500: 500;
+$z-index__600: 600;
+$z-index__700: 700;
+$z-index__800: 800;
+$z-index__900: 900;
+$z-index__1000: 1000;
+
+// Headers
+$header__color: $color__black;
+$header__font-family: null;
+$header__font-size: $font-size__base;
+$header__font-weight: $font-weight__bold;
+$header__margin: $indent__base 0 $indent__xl;
+$header__line-height: 1;
+$header__text-decoration: null;
+$header__text-transform: uppercase;
+
+$h1__color: $header__color;
+$h1__font-family: $header__font-family;
+$h1__font-size: 4.5rem;
+$h1__font-weight: $header__font-weight;
+$h1__margin: $header__margin;
+$h1__line-height: $header__line-height;
+$h1__text-decoration: $header__text-decoration;
+$h1__text-transform: $header__text-transform;
+
+$h2__color: $header__color;
+$h2__font-family: $header__font-family;
+$h2__font-size: 4rem;
+$h2__font-weight: $header__font-weight;
+$h2__margin: $header__margin;
+$h2__line-height: $header__line-height;
+$h2__text-decoration: $header__text-decoration;
+$h2__text-transform: $header__text-transform;
+
+$h3__color: $header__color;
+$h3__font-family: $header__font-family;
+$h3__font-size: $font-size__xxl;
+$h3__font-weight: $header__font-weight;
+$h3__margin: $header__margin;
+$h3__line-height: $header__line-height;
+$h3__text-decoration: $header__text-decoration;
+$h3__text-transform: $header__text-transform;
+
+$h4__color: $header__color;
+$h4__font-family: $header__font-family;
+$h4__font-size: $font-size__xl;
+$h4__font-weight: $header__font-weight;
+$h4__margin: $header__margin;
+$h4__line-height: $header__line-height;
+$h4__text-decoration: $header__text-decoration;
+$h4__text-transform: $header__text-transform;
+
+$h5__color: $header__color;
+$h5__font-family: $font-size__l;
+$h5__font-size: $font-size__xl;
+$h5__font-weight: $header__font-weight;
+$h5__margin: $header__margin;
+$h5__line-height: $header__line-height;
+$h5__text-decoration: $header__text-decoration;
+$h5__text-transform: $header__text-transform;
+
+$h6__color: $header__color;
+$h6__font-family: $font-size__m;
+$h6__font-size: $header__font-family;
+$h6__font-weight: $header__font-weight;
+$h6__margin: $header__margin;
+$h6__line-height: $header__line-height;
+$h6__text-decoration: $header__text-decoration;
+$h6__text-transform: $header__text-transform;
+
+$border__thin__white: 1px solid $color__white;
