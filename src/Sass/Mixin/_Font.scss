@@ -1,0 +1,27 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  -------------------------------
+
+//
+//  Font
+//  ---------------------------------
+
+@mixin font-face (
+    $_family-name,
+    $_font-path,
+    $_font-weight: $font-weight__regular,
+    $_font-style: normal
+) {
+    @font-face {
+        @include css (font-family, $_family-name);
+        @include css (font-weight, $_font-weight);
+        @include css (font-style, $_font-style);
+        src: url('#{$_font-path}.eot');
+        src: url('#{$_font-path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$_font-path}.woff2') format('woff2'),
+        url('#{$_font-path}.woff') format('woff'),
+        url('#{$_font-path}.ttf') format('truetype'),
+        url('#{$_font-path}.svg') format('svg');
+    }
+}

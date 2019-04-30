@@ -1,0 +1,37 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------------------
+
+//
+//  Icons:
+//  ---------------------------------------------
+
+// Common
+
+.icon--droplet {
+    position: relative;
+
+    &:before {
+        @include property__prefixer(transform, rotate(135deg));
+        background-color: $color__black;
+        border-radius: 50% 50% 50% 0;
+        content: '';
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+    }
+
+    &:after {
+        @include property__prefixer(transform, translate(-50%, -50%));
+        background-color: $color__white;
+        border-radius: 50%;
+        content: '';
+        height: 3px;
+        left: calc(50% + 2px);
+        position: absolute;
+        top: calc(50% + 1px);
+        width: 3px;
+        z-index: $z-index__100;
+    }
+}

@@ -1,0 +1,39 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Layout
+//  ---------------------------------
+
+@mixin columns (
+    $_columns: $root__columns,
+    $_span: null,
+    $_width: $root__column-width
+) {
+    @if($_span) {
+        width: ($_width / $_columns) * $_span;
+    }
+}
+
+// Flex-box
+@mixin display__flex ($_value: flex) {
+    @include value__prefixer (display, $_value);
+}
+
+@mixin flex ($_value: 1) {
+    @include property__prefixer (flex, $_value);
+}
+
+@mixin flex__direction ($_value: column) {
+    @include property__prefixer (flex-direction, $_value);
+}
+
+@mixin flex__wrap ($_value: wrap) {
+    @include property__prefixer (flex-wrap, $_value);
+}
+
+@mixin flex__basis ($_value: null) {
+    @include property__prefixer (flex-basis, $_value);
+}

@@ -1,0 +1,35 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  -------------------------------
+
+//
+//  Layout
+//  ---------------------------------
+
+//  Screensizes:
+$screen__xxl: 1480px;
+$screen__xl: 1024px;
+$screen__l: 768px;
+$screen__m: 600px;
+$screen__s: 480px;
+$screen__xs: 320px;
+
+//  Indents
+$indent__base: 2rem; // 20px
+$indent__xxl: $indent__base * 2.5; // 50px
+$indent__xl: $indent__base * 2; // 40px
+$indent__l: $indent__base * 1.5; // 30px
+$indent__m: $indent__base * 1.25; // 25px
+$indent__s: $indent__base * .75; // 15px
+$indent__xs: $indent__base / 2; // 10px
+$indent__xxs: $indent__base / 4; // 5px
+
+//  Widths
+$layout__width: ''; // for the fixed width layout
+$layout__max-width: 128rem;
+$layout__indent__width: $indent__base;
+
+//  Columns:
+$root__columns: 12;
+$root__column-width: 100%;

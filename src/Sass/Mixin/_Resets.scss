@@ -1,0 +1,17 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  -------------------------------
+
+//
+//  Resets
+//  ---------------------------------
+
+@mixin reset-list (
+    $_list-margin: 0,
+    $_list-padding: 0
+) {
+    @include css(margin, $_list-margin);
+    @include css(padding, $_list-padding);
+    list-style: none;
+}

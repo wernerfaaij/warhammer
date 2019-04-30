@@ -1,0 +1,18 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Sources
+//  ---------------------------------
+
+// Common
+
+button {
+    background-color: rgba($color__white, .5);
+    border: 1px solid $color__yellow_husk;
+    font-family: $font-family__base;
+    font-size: $font-size__base;
+    line-height: 100%;
+}

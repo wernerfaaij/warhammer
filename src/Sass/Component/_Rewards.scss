@@ -1,0 +1,75 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Rewards
+//  ---------------------------------
+
+.table__rewards {
+    border-right: 1px solid $color__yellow_husk;
+    box-sizing: border-box;
+    padding: $indent__xs $indent__s;
+
+    ul {
+        @include reset-list();
+    }
+
+    .reward {
+        @include property__prefixer(transition, all .5s);
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .reward__points {
+        padding-right: $indent__s;
+    }
+
+    .reward__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .reward__content {
+        @include property__prefixer(transition, all .5s);
+        color: lighten($color__black, 50%);
+        overflow: hidden;
+        max-height: 0;
+
+        &.content--show {
+            max-height: 600px;
+        }
+    }
+
+    .reward__header {
+        @include display__flex();
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .reward__controls {
+        margin-top: $indent__xs;
+
+        button {
+            padding: $indent__xs;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .reward--available {
+        max-height: 600px;
+        opacity: 1;
+
+        &:after {
+            border-bottom: 1px solid $color__yellow_husk;
+            content: '';
+            display: block;
+            margin: 20px 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Sources
+//  ---------------------------------
+
+// Common
+
+.point-counter {
+    background-color: rgba($color__white, .5);
+    border: 1px solid $color__yellow_husk;
+    margin-bottom: $indent__xs;
+
+    .counter {
+        @include display__flex();
+        padding: $indent__xs $indent__xs;
+    }
+
+    .counter__content {
+        @include columns(
+            $_span: 10
+        );
+        @include display__flex();
+    }
+
+    .counter__controls {
+        @include columns(
+            $_span: 2
+        );
+        @include display__flex();
+        @include property__prefixer(justify-content, flex-end);
+        text-align: left;
+
+        > button {
+            width: 50%;
+
+            &:disabled {
+                color: lighten($color__black, 80%);
+                background-color: rgba($color__white, .25);
+            }
+
+            &:first-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    .counter__title,
+    .counter__counter {
+        @include columns(
+            $_span: 6
+        );
+    }
+
+    .counter__counter {
+        text-align: center;
+    }
+
+    .controls__button {
+        display: inline-block;
+    }
+}
