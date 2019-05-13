@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactHtmlParser from 'react-html-parser';
+
 
 class Message extends Component {
     constructor(props) {
@@ -25,11 +27,13 @@ class Message extends Component {
                 <div className='message__wrapper'>
                     <h3 className='message__title'>{message.title}</h3>
                     <div className='message__content'>
-                        {message.content}
+                        {ReactHtmlParser(message.content)}
                     </div>
-                    <div className='message__result'>
-                        {message.result}
-                    </div>
+                    {message.result && (
+                        <div className='message__result'>
+                            {ReactHtmlParser(message.result)}
+                        </div>
+                    )}
                     <div className='message__controls'>
                         {message.accept ? (
                             <button className='button button__primary' onClick={message.accept}>Accept</button>

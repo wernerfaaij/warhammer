@@ -1,0 +1,42 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Tabs
+//  ---------------------------------
+
+.tabs__controls {
+    @include display__flex();
+}
+
+.tabs--button {
+    background-color: $color__white__pampas;
+    border: 1px solid $color__yellow_husk;
+    margin-bottom: -1px;
+    padding: $indent__xs;
+    cursor: pointer;
+
+    &:not(:first-child) {
+        margin-left: -1px;
+    }
+
+    &.active {
+        border-bottom: 0;
+    }
+}
+
+.tabs__content {
+    background-color: $color__white__pampas;
+    border: 1px solid $color__yellow_husk;
+    padding: $indent__xs 0;
+
+    .tab {
+        display: none;
+
+        &.active  {
+            display: block;
+        }
+    }
+}

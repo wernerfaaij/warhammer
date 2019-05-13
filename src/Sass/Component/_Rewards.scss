@@ -7,8 +7,7 @@
 //  Rewards
 //  ---------------------------------
 
-.table__rewards {
-    border-right: 1px solid $color__yellow_husk;
+.tab--rewards {
     box-sizing: border-box;
     padding: $indent__xs $indent__s;
 
@@ -35,7 +34,7 @@
 
     .reward__content {
         @include property__prefixer(transition, all .5s);
-        color: lighten($color__black, 50%);
+        color: lighten($color__black, 30%);
         overflow: hidden;
         max-height: 0;
 

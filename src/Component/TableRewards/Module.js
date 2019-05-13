@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 class TableRewards extends Component {
     constructor (props) {
@@ -43,18 +44,18 @@ class TableRewards extends Component {
                                 {reward.points}
                             </span>
                             <span className='reward__title'>
-                                {reward.title}
+                                {ReactHtmlParser (reward.title)}
                             </span>
                         </div>
                         <div className={(toggledIndex === index ? 'reward__content content--show' : 'reward__content')}>
                             {reward.fluf ? (
                                 <span className='reward_fluf'>
-                                    {reward.fluf}
+                                    {ReactHtmlParser (reward.fluf)}
                                 </span>
                             ) : ''}
                             {reward.effect ? (
                                 <span className='reward_fluf'>
-                                    {reward.effect}
+                                    {ReactHtmlParser (reward.effect)}
                                 </span>
                             ) : ''}
                         </div>
