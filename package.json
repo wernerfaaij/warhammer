@@ -1,5 +1,6 @@
 {
   "name": "warhammer",
+  "homepage": "http://wernerfaaij.nl/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

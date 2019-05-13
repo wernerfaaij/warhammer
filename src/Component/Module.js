@@ -12,6 +12,7 @@ class App extends Component {
             score: 0,
             bloodtidePoints: 0,
             message: '',
+            tabsOpend: 'rewards',
             tableSummoning: [{
                 points: '2',
                 unit: 'Bloodmaster Herald of Khorne',
@@ -125,10 +126,16 @@ class App extends Component {
         });
     }
 
-    onAcceptReward = (event) => {
+    onAcceptReward = () => {
         this.setState ({
             bloodtidePoints: 0,
             message: ''
+        });
+    }
+
+    selectTab = (tab) => {
+        this.setState ({
+            tabsOpend: tab
         });
     }
 
@@ -165,7 +172,7 @@ class App extends Component {
                 accept: this.onAcceptReward,
                 decline: this.onDeclineReward
             }
-        })
+        });
     };
 
     render () {
@@ -175,8 +182,16 @@ class App extends Component {
             message,
             bloodtidePoints,
             tableSummoning,
-            tableRewards
+            tableRewards,
+            tabsOpend
         } = this.state;
+
+        const amountContent = (table,  bloodtidePoints) => {
+            const availableRewards = table.filter(i => i.points <= bloodtidePoints);
+            const numberOfRewards = availableRewards.length;
+
+            return (numberOfRewards <= 9 ? '0' + numberOfRewards : numberOfRewards);
+        };
 
         return (
             <div className="App">
@@ -203,23 +218,40 @@ class App extends Component {
                             onAdd = {this.onAdd}/>
                     </div>
                     {bloodtidePoints ? (
-                        <div className='table'>
-                            <div className='table__rewards'>
-                                <TableRewards
-                                    tableRewards={tableRewards}
-                                    bloodtidePoints={bloodtidePoints}
-                                    useReward = {this.useReward}
-                                />
+                        <div className='tabs'>
+                            <div className='tabs__controls'>
+                                <div className={'tabs__control tabs--button' + (tabsOpend === 'rewards' ? ' active' : '')}
+                                     data-tab="rewards">
+                                    <span onClick={() => this.selectTab('rewards')}>Rewards {amountContent(tableRewards,  bloodtidePoints)}</span>
+                                </div>
+                                <div className={'tabs__control tabs--button' + (tabsOpend === 'summoning' ? ' active' : '')}
+                                     data-tab="summoning">
+                                    <span onClick={() => this.selectTab('summoning')}>Summoning {amountContent(tableSummoning, bloodtidePoints)}</span>
+                                </div>
                             </div>
-                            <div className='table__summoning'>
-                                <TableSummoning
-                                    tableSummoning={tableSummoning}
-                                    bloodtidePoints={bloodtidePoints}
-                                    useSummon = {this.useSummon}
-                                />
+                            <div className='tabs__content'>
+                                <div className={'tab tab--rewards' + (tabsOpend === 'rewards' ? ' active' : '')}>
+                                    <h2>Rewards</h2>
+                                    <TableRewards
+                                        tableRewards={tableRewards}
+                                        bloodtidePoints={bloodtidePoints}
+                                        useReward = {this.useReward}
+                                    />
+                                </div>
+                                <div className={'tab tab--summoning' + (tabsOpend === 'summoning' ? ' active' : '')}>
+                                    <h2>Summoning</h2>
+                                    <TableSummoning
+                                        tableSummoning={tableSummoning}
+                                        bloodtidePoints={bloodtidePoints}
+                                        useSummon = {this.useSummon}
+                                    />
+                                </div>
                             </div>
                         </div>
                     ) : ''}
+                    <div>
+                        <span>All content and names that are used within this page are owned by Games Workshop. I just borrow it to create this web app.</span>
+                    </div>
                 </section>
             </div>
         );
