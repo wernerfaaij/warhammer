@@ -28,7 +28,7 @@
 
 .message__wrapper {
     @include property__prefixer(transform, translate(-50%, -50%));
-    background-color: rgba($color__white, .7);
+    background-color: $color__white__pampas;
     box-sizing: border-box;
     border: 1px solid $color__yellow_husk;
     left: 50%;

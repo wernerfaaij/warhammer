@@ -1,0 +1,36 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Popup
+//  ---------------------------------
+
+// Common
+
+.rules {
+    margin: 0;
+    padding: 0;
+
+    .rule {
+        @include reset-list();
+        margin-bottom: $indent__base;
+    }
+}
+
+.command-abilities {
+    margin: 0;
+    padding: 0;
+
+    .abilities {
+        @include reset-list();
+        margin-bottom: $indent__base;
+    }
+}
+
+.faction-abilities {
+    .abilities {
+
+    }
+}

@@ -9,10 +9,49 @@
 
 // Common
 
-button {
+button,
+.button {
     background-color: rgba($color__white, .5);
     border: 1px solid $color__yellow_husk;
     font-family: $font-family__base;
     font-size: $font-size__base;
     line-height: 100%;
+}
+
+.button-close {
+    display: block;
+    float: right;
+    margin-top: -1rem;
+    margin-right: -1rem;
+    height: 2rem;
+    position: relative;
+    width: 2rem;
+
+    &:after {
+        @include property__prefixer(transform, rotate(45deg));
+        background-color: $color__black;
+        top: 3px;
+        left: 9px;
+        position: absolute;
+        display: block;
+        content: '';
+        height: 1.5rem;
+        width: .2rem;
+
+    }
+    &:before {
+        @include property__prefixer(transform, rotate(-45deg));
+        background-color: $color__black;
+        top: 3px;
+        left: 9px;
+        position: absolute;
+        display: block;
+        content: '';
+        height: 1.5rem;
+        width: .2rem;
+
+    }
+    span {
+        display: none;
+    }
 }

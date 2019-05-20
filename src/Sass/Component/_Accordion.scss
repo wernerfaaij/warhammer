@@ -1,0 +1,61 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Accordion
+//  ---------------------------------
+
+// Common
+
+.accordion {
+    margin: 0;
+    padding: 0;
+
+    &-title {
+        border-bottom: 1px solid $color__yellow_husk;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        text-transform: uppercase;
+
+        &:after {
+            @include property__prefixer(transition, all .5s);
+            @include property__prefixer(transform, translateY(-50%));
+            top: 50%;
+            border: 8px solid transparent;
+            border-top-color: $color__black;
+            border-bottom: 0;
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+        }
+    }
+    &-item {
+        @include reset-list();
+        overflow: hidden;
+        width: 100%;
+
+        &.active {
+            .accordion {
+                &-title {
+                    &:after {
+                        @include property__prefixer(transform, rotate(180deg));
+                        top: calc(50% - 4px);
+                    }
+                }
+                &-content {
+                    max-height: 9999px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-content {
+        @include property__prefixer(transition, all .5s);
+        opacity: 0;
+        max-height: 0;
+    }
+}
