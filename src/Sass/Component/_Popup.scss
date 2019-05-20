@@ -1,0 +1,29 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Popup
+//  ---------------------------------
+
+// Common
+
+.popup {
+    box-sizing: border-box;
+    background-color: rgba($color__black, .75);
+    height: 100vh;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: $indent__base;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    &-content {
+        background-color: $color__white__pampas;
+        border: 1px solid $color__yellow_husk;
+        padding: $indent__base;
+    }
+}

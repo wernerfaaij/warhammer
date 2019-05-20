@@ -1,0 +1,36 @@
+//
+//  @author:  Werner Faaij <werner_faaij@hotmail.com
+//  @url:     wernerfaaij.nl
+//  ---------------------------------
+
+//
+//  Navigation
+//  ---------------------------------
+
+// Common
+
+.navigation {
+    @include reset-list();
+    @include display__flex();
+    border: 1px solid $color__yellow_husk;
+    border-top: 0;
+    margin: 0 $indent__s;
+
+    &-item {
+        width: 50%;
+
+        &:first-child {
+            border-right: 1px solid $color__yellow_husk;
+        }
+    }
+    &-link {
+        background-color: $color__white__pampas;
+        box-sizing: border-box;
+        color: $color__black;
+        display: block;
+        padding: $indent__xs $indent__s;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+    }
+}
